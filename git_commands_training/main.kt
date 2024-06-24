@@ -1,3 +1,3 @@
 fun main() {
-    print("This is Abdulaziz")
+    println("This is Abdulaziz")
 }
