@@ -1,5 +1,5 @@
 class Player(val name: String, val surname: String) {
-    fun fullName() = "${name + " " + surname}"
+    fun fullName() = "${name.uppercase() + " " + surname.uppercase()}"
     var totalScore = 0
     var personalBestScore = 0
     fun play(lvlScore: Int) {
@@ -55,5 +55,5 @@ fun main() {
 
     //  print the winer and his total scores and personal best score
 
-    println("Winer is ${winer.fullName().uppercase()} with a total score of ${winer.totalScore} and a personal best score of ${winer.personalBestScore}")
+    println("Winer is ${winer.fullName()} with a total score of ${winer.totalScore} and a personal best score of ${winer.personalBestScore}")
 }
