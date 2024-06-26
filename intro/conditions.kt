@@ -1,20 +1,19 @@
 fun main() {
-    println("This is Conditions Practice")
-    val c =  12
-    val h = c/2
-
-    
-    for (i in 1..h-1) {
-        for (j in 1..i) {
-            print("*")
-        }
-        println()
+    println("This is Conditions Practice\n")
+    val weekday = "Friday"
+    val hour = 20
+    val isOpen = when(weekday){
+        "Monday" -> hour >= 8 && hour <= 12
+        "Tuesday","Wednesday","Thursday" -> hour >= 8 && hour <= 18
+        "Friday" -> hour >= 8 && hour <= 21
+        "Saturday" -> hour >= 9 && hour <= 16
+        "Sunday" -> hour >= 8 && hour <= 16
+        else -> false
     }
 
-    for (m in h downTo 1) {
-        for (k in 1..m) {
-            print("*")
-        }
-        println()
+    if(isOpen) {
+        println("Resturant is open now")
+    }else {
+        println("Resturant is closed now")
     }
 }
